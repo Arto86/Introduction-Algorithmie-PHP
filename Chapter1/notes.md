@@ -20,4 +20,4 @@ En **décimal** même principe avec les puissances de 10.
 Valeur binaire 11 :
 ` 1*2¹ + 1*2⁰ = 2 + 1 = 3 `
 
-> Une notation en **indice** (nombres en retrait en bas comme tel : $11{(2)}=3{(10)}$ ) est souvent utilisé pour indiquer les conversions
+> Une notation en **indice** (nombres en retrait en bas comme tel : $11_{(2)}=3_{(10)}$ ) est souvent utilisé pour indiquer les conversions
