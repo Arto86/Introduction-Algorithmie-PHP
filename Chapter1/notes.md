@@ -137,7 +137,6 @@ On note la complexité d'un algorithme comme tel : O(f(n)).
 - f est une fonction (déterminé par l'algorithme) qui prend en paramètre n
 - n est la quantité d'informations que l'algorithme traite
 
-<pre>
 PHP
 ```
 // Ici n = la taille du tableau $liste
@@ -149,4 +148,3 @@ function f($liste) {
     }
 }
 ```
-</pre>
