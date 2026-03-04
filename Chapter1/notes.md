@@ -195,9 +195,9 @@ Voici les classes de complexité les plus courantes, de la plus rapide à la plu
 | Notation | Nom |
 | :--- | :--- |
 | **$O(1)$** | **Constante** |
-| **$O(\log n)$** | **Logarithmique** |
+| **$O(\log(n))$** | **Logarithmique** |
 | **$O(n)$** | **Linéaire** |
-| **$O(n \log n)$** | **Quasi-linéaire** |
+| **$O(n.\log(n))$** | **Quasi-linéaire** |
 | **$O(n^2)$** | **Quadratique** |
 | **$O(n^3)$** | **Cubique** |
 | **$O(n^p)$** | **Polynomiale** |
