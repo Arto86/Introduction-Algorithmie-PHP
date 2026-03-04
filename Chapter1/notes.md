@@ -40,7 +40,7 @@ Nous pouvons aussi l'écrire de cette manière **2<sup>n</sup>**. <sup>n</sup> �
 
 4. Conversion d'un décimal ($\neq$ base 10) à la base 2
 
-On divise successivement par 2, ensuite, avec les restes alignez les 0 et les 1 en partant du dernier reste obtenu vers le premier :
+- On divise successivement par 2, ensuite, avec les restes alignez les 0 et les 1 en partant du dernier reste obtenu vers le premier :
     - 183/2=91, reste 1;
     - 91/2=45, reste 1;
     - 45/2=22, reste 1;
