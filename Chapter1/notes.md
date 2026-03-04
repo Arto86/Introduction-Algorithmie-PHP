@@ -4,7 +4,7 @@
 ## Base 2 et 10
 
 
-1. Base 10
+1. **Base 10**
 
 Pour convertir le binaire en valeur décimal il faut utiliser les puissances de 2.
 
@@ -15,7 +15,7 @@ Valeur décimal 1234 :
 ` 1*10³ + 2*10² + 3*10¹ + 4*10⁰ = 1000 + 200 + 30 + 4 = 1234 `
 
 
-2. Base 2
+2. **Base 2**
 
 En **décimal** même principe avec les puissances de 10.
 
@@ -25,7 +25,7 @@ Valeur binaire 11 :
 > Une notation en **indice** (nombres en retrait en bas comme tel : $11_{(2)}=3_{(10)}$ ) est souvent utilisé pour indiquer les conversions
 
 
-3. Format 8 bits
+3. **Format 8 bits**
 
 Exemple de valeur binaire codé sur 8 bits :
 ` 2⁷ + 2⁶ + 2⁵ + 2⁴ + 2³ + 2² + 2¹ + 2⁰ = 128 + 64 + 32 + 16 + 8 + 4 + 2 + 1 = 255 `
@@ -38,7 +38,7 @@ Nous pouvons aussi l'écrire de cette manière **2<sup>n</sup>**. <sup>n</sup> �
 > Il faut bien noter que la valeur **maximale** convertie en décimal est 2<sup>n</sup>-1
 
 
-4. Conversion d'un décimal ($\neq$ base 10) à la base 2
+4. **Conversion d'un décimal ($\neq$ base 10) à la base 2**
 
 - On divise successivement par 2, ensuite, avec les restes alignez les 0 et les 1 en partant du dernier reste obtenu vers le premier :
     - 183/2=91, reste 1;
@@ -48,6 +48,28 @@ Nous pouvons aussi l'écrire de cette manière **2<sup>n</sup>**. <sup>n</sup> �
     - 11/2=5, reste 1;
     - 5/2=2, reste 1;
     - 2/2=1, reste 0;
-    - On prend en compte le dernier résultat (forcément 1)
+    - 1/2=0, reste 1;
 
 En partant du dernier résultat : 10110111
+
+> Depuis les années 2000 les ordinateurs peuvent manipuler des nombres sur 64 bits = 2<sup>64</sup> = 18 446 744 073 709 551 616 soit plus de 18 milliards de milliards.
+
+> L'idée d'utiliser 2 valeurs pour encoder d'autre valeurs remonte à **Francis Bacon** (1623).  Le "bilitère" composé de 2 lettres groupés par cinq : AAAAA = A, AAAAB = B, BABBB = Z. L'alphabet latin contenait 24 lettres (i = j et u = v).
+
+
+## Les octets et les mots
+
+1 octet = 8 bits (2⁸ = 256 valeurs).
+
+> Pendant longtemps 256 valeurs suffisait à représenter les chiffres, lettres et symboles des alphabets occidentaux.
+
+Avec les progrès informatiques certains microprocesseurs peuvent manipuler des valeurs atteignant jusqu'à 128 bits (16 octets) et plus. Ces valeurs devenant de plus en plus difficiles à décrire et à représenter, on parle maintenant de **mot** mémoire.
+
+> Le bit est l'unité de mesure de l'information (0 ou 1), tandis que le mot (word en anglais) est l'unité de travail du CPU (processeur). On peut le voir comme **la taille de la main** du CPU.
+
+Certains CPU font une différence entre divers types de mots (Par exemple les 68000 de Motorola utilisent des mots de 16 bits, et des mots longs (long word) de 32 bits).
+
+!! Suivant le type de CPU l'ordre des mots est différent de l'ordre "logique". Par exemple sur un microprocesseur x86 en mode réel (16 bits), où, 1 mot = 16 bits = 2 octets, la valeur décimale 38457 (1001011000111001<sub>(2)</sub>), pour être stockés prend 2 octets (Puisque > à 255(1 octet) et < à 65 535(2 octets)) l'octet de poids faible (8 premiers bits), sera placé dans la première case mémoire et l'octet de poids fort ira à la case suivante (Idem pour 32 et 64 bits).
+
+| **Case mémoire 1** | **Case mémoire 2** |
+| 00111001 | 10010110 |
