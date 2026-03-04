@@ -1,4 +1,4 @@
-# **1** Représentation interne des instructions et des données
+# **1.** Représentation interne des instructions et des données
 
 
 ## Base 2 et 10
@@ -119,7 +119,7 @@ Si on reprend l'exemple d'une valeur de 64 bits en binaire il faut **64** 0 ou 1
 
 On peut voir la programmation comme de la cuisine. À moins d'avoir la science innée des mélanges (Ou d'avoir pratiqué pendant longtemps), vous aurez beau avoir les meilleurs instruments de cuisine/ordinateurs ou les meilleurs ingrédients/langages de programmation, sans recette/technique le résultat ne sera jamais délicieux/optimisé.
 
-#### **DÉFINITION** : Un **algorithme** est une suite d'instructions qui quand elles sont exécutées correctement aboutissent au résultat attendu.
+#### ***DÉFINITION** : Un **algorithme** est une suite d'instructions qui quand elles sont exécutées correctement aboutissent au résultat attendu.*
 
 > L'algorithme est donc une recette pour qu'un ordinateur puisse donner un résultat souhaité.
 
@@ -192,13 +192,17 @@ function trouverDoublons($tableau) {
 ### Liste des complexités standards
 Voici les classes de complexité les plus courantes, de la plus rapide à la plus lente :
 
-| Notation | Nom | Description |
-| :--- | :--- | :--- |
-| **$O(1)$** | **Constante** | Le temps reste le même, peu importe la taille de $n$. |
-| **$O(\log n)$** | **Logarithmique** | Très efficace (ex: Recherche dichotomique). |
-| **$O(n)$** | **Linéaire** | Le temps est directement proportionnel à $n$. |
-| **$O(n \log n)$** | **Quasi-linéaire** | Souvent la complexité des tris efficaces (Tri fusion). |
-| **$O(n^2)$** | **Quadratique** | Typique des boucles imbriquées (Lent pour grand $n$). |
-| **$O(2^n)$** | **Exponentielle** | Temps de calcul qui double à chaque ajout dans $n$. |
+| Notation | Nom |
+| :--- | :--- |
+| **$O(1)$** | **Constante** |
+| **$O(\log n)$** | **Logarithmique** |
+| **$O(n)$** | **Linéaire** |
+| **$O(n \log n)$** | **Quasi-linéaire** |
+| **$O(n^2)$** | **Quadratique** |
+| **$O(n^3)$** | **Cubique** |
+| **$O(n^p)$** | **Polynomiale** |
+| **$O(n^(log(n)))$** | **Quasi-polynomiale** |
+| **$O(n!)$** | **Factorielle** |
+| **$O(2^n)$** | **Exponentielle** |
 
 > **Note :** On s'intéresse toujours au **pire des cas** (quand l'élément cherché est à la toute fin ou absent).
