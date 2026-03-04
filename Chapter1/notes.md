@@ -119,6 +119,34 @@ Si on reprend l'exemple d'une valeur de 64 bits en binaire il faut **64** 0 ou 1
 
 On peut voir la programmation comme de la cuisine. À moins d'avoir la science innée des mélanges (Ou d'avoir pratiqué pendant longtemps), vous aurez beau avoir les meilleurs instruments de cuisine/ordinateurs ou les meilleurs ingrédients/langages de programmation, sans recette/technique le résultat ne sera jamais délicieux/optimisé.
 
-**DÉFINITION** : Un **algorithme** est une suite d'instructions qui quand elles sont exécutées correctement aboutissent au résultat attendu.
+#### **DÉFINITION** : Un **algorithme** est une suite d'instructions qui quand elles sont exécutées correctement aboutissent au résultat attendu.
 
-` ### **DÉFINITION** : Un **algorithme** est une suite d'instructions qui quand elles sont exécutées correctement aboutissent au résultat attendu. `
+> L'algorithme est donc une recette pour qu'un ordinateur puisse donner un résultat souhaité.
+
+> Le mot Algorithme vient d'Algoritmi, une latinisation du nom du mathématicien Al Khuwarizmi (IX siècle).
+
+Un algorithme peut aussi bien être un texte (recette) qu'un dessin (organigramme), la méthode utilisé dépendra des besoins.
+
+## La complexité algorithmique
+
+Aussi appeler le "coût" d'un algorithme, la complexité de celui-ci est calculable.
+
+On note la complexité d'un algorithme comme tel : O(f(n)).
+
+- O est l'ordre
+- f est une fonction (déterminé par l'algorithme) qui prend en paramètre n
+- n est la quantité d'informations que l'algorithme traite
+
+<pre>
+PHP
+```
+// Ici n = la taille du tableau $liste
+function f($liste) {
+    $n = count($liste); 
+    // L'algorithme détermine f : ici une simple boucle = f(n) = n
+    foreach ($liste as $item) {
+        echo $item;
+    }
+}
+```
+</pre>
