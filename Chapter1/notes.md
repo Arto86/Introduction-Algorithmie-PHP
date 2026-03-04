@@ -137,8 +137,11 @@ On note la complexité d'un algorithme comme tel : O(f(n)).
 - f est une fonction (déterminé par l'algorithme) qui prend en paramètre n
 - n est la quantité d'informations que l'algorithme traite
 
-PHP
-```
+1. Recherche Linéaire, Complexité constante
+
+Dans cet algorithme, on parcourt une liste pour trouver une valeur. Plus la liste est grande, plus le temps de calcul augmente de façon proportionnelle.
+
+```php
 // Ici n = la taille du tableau $liste
 function f($liste) {
     $n = count($liste); 
@@ -148,3 +151,54 @@ function f($liste) {
     }
 }
 ```
+
+**Analyse :**
+- Si le tableau a 10 éléments, on fait au maximum 10 comparaisons.
+- Si le tableau a $n$ éléments, on fait au maximum $n$ comparaisons.
+- **Notation :** On dit que cet algorithme est en **$O(n)$** (Complexité Linéaire).
+
+---
+
+2. Recherche de doublons, Complexité quadratique
+
+Le temps d'exécution est proportionnel au carré de la taille des données d'entrée ($n \times n$). C'est très fréquent lorsqu'on utilise des boucles imbriquées (une boucle dans une boucle).
+
+```php
+<?php
+// On compare chaque élément avec tous les autres
+function trouverDoublons($tableau) {
+    $n = count($tableau);
+    // Première boucle
+    for ($i = 0; $i < $n; $i++) {
+        // Deuxième boucle imbriquée
+        for ($j = $i + 1; $j < $n; $j++) {
+            if ($tableau[$i] === $tableau[$j]) {
+                return true; // Doublon trouvé !
+            }
+        }
+    }
+    return false; // Pas de doublon
+}
+?>
+```
+
+**Analyse :**
+- Si le tableau a 10 éléments, on fait environ 100 comparaisons ($10^2$).
+- Si le tableau a $n$ éléments, on fait $n \times n$ comparaisons.
+- **Notation :** On dit que cet algorithme est en **$O(n^2)$** (Complexité Quadratique).
+
+
+
+### Liste des complexités standards
+Voici les classes de complexité les plus courantes, de la plus rapide à la plus lente :
+
+| Notation | Nom | Description |
+| :--- | :--- | :--- |
+| **$O(1)$** | **Constante** | Le temps reste le même, peu importe la taille de $n$. |
+| **$O(\log n)$** | **Logarithmique** | Très efficace (ex: Recherche dichotomique). |
+| **$O(n)$** | **Linéaire** | Le temps est directement proportionnel à $n$. |
+| **$O(n \log n)$** | **Quasi-linéaire** | Souvent la complexité des tris efficaces (Tri fusion). |
+| **$O(n^2)$** | **Quadratique** | Typique des boucles imbriquées (Lent pour grand $n$). |
+| **$O(2^n)$** | **Exponentielle** | Temps de calcul qui double à chaque ajout dans $n$. |
+
+> **Note :** On s'intéresse toujours au **pire des cas** (quand l'élément cherché est à la toute fin ou absent).
