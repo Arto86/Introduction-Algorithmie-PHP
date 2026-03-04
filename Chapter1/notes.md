@@ -201,7 +201,7 @@ Voici les classes de complexité les plus courantes, de la plus rapide à la plu
 | **$O(n^2)$** | **Quadratique** |
 | **$O(n^3)$** | **Cubique** |
 | **$O(n^p)$** | **Polynomiale** |
-| **$O(n^(log(n)))$** | **Quasi-polynomiale** |
+| **$O(n^{(log(n))})$** | **Quasi-polynomiale** |
 | **$O(n!)$** | **Factorielle** |
 | **$O(2^n)$** | **Exponentielle** |
 
