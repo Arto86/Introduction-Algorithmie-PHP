@@ -25,7 +25,7 @@ Valeur binaire 11 :
 > Une notation en **indice** (nombres en retrait en bas comme tel : $11_{(2)}=3_{(10)}$ ) est souvent utilisé pour indiquer les conversions
 
 Exemple de valeur binaire codé sur 8 bits :
-` 2⁷ + 2⁶ + 2⁵ + 2⁴ + 2³ + 2² + 2¹ + 2⁰ = 128 + 64 + 32 + 16 + 8 + 4 + 2 + 1 = 256 `
+` 2⁷+2⁶+2⁵+2⁴+2³+2²+2¹+2⁰ = 128+64+32+16+8+4+2+1 = 256 `
 
 > Donc : $11111111_{(2)}=255_{(10)}$
 
