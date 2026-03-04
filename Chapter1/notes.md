@@ -72,4 +72,5 @@ Certains CPU font une différence entre divers types de mots (Par exemple les 68
 !! Suivant le type de CPU l'ordre des mots est différent de l'ordre "logique". Par exemple sur un microprocesseur x86 en mode réel (16 bits), où, 1 mot = 16 bits = 2 octets, la valeur décimale 38457 (1001011000111001<sub>(2)</sub>), pour être stockés prend 2 octets (Puisque > à 255(1 octet) et < à 65 535(2 octets)) l'octet de poids faible (8 premiers bits), sera placé dans la première case mémoire et l'octet de poids fort ira à la case suivante (Idem pour 32 et 64 bits).
 
 | **Case mémoire 1** | **Case mémoire 2** |
+| :--- | :--- |
 | 00111001 | 10010110 |
