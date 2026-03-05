@@ -267,7 +267,9 @@ L'abstraction nous permet d'interpréter plus facilement le langage machine. On 
 - Niveau 1 (**Langage Assembleur**(Assembly)): `B8` devient `MOV` (Abréviation de Move), c'est l'assembleur qui traduit `MOV` en `B8`.
 - Niveau 2 (Langage haut niveau type PHP): `$n = 5;`.
 
-Important de noté que la liste ci-dessus est loin d'être exhaustive et que l'on pourrait créer autant de niveaux que de langages de programmation existant. Par exemple le **C** se logerait entre le niveau 1 et 2 que l'on a définit, il est plus haut niveau que l'**assembleur** mais plus bas niveaux que des langages interprétés comme le **PHP**.
+Important de noté que la liste ci-dessus est loin d'être exhaustive. Par exemple le **C** se logerait entre le niveau 1 et 2 que l'on a définit, il est plus haut niveau que l'**assembleur** mais plus bas niveaux que des langages interprétés comme le **PHP**.
+
+**IMPORTANT**: En général un niveau d'abstraction bas signifie plus de possibilités et de contrôle sur le système. Les langages bas niveaux ne deviennent donc pas obsolètes avec l'arrivée de langages haut-niveau. D'autant qu'au plus on descend de niveau de complexité au plus les performances du programme s'améliorent.
 
 #### L'assembleur
 
@@ -327,3 +329,4 @@ Affichage d'un "Hello world!" en PHP :
 print("Hello world!");
 ?>
 ```
+
