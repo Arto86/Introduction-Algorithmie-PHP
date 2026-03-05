@@ -226,6 +226,92 @@ Calculer des nombres entiers est très simple pour un processeur. Calculer avec 
 Pour mettre en perspective les différentes complexité algorithmique prenons un exemple de 20 données traités :
 - O(n) : O(20). La vitesse de calcul est ridicule ( millionièmes de seconde )
 - O(n!) : O(20!) = 2 432 902 008 176 640 000. Cela équivaut à 1 398 000 secondes soit 16 jours. La complexité O(n!) est la pire qui puisse exister.
-- O(2^n) : O(2<sup>20</sup>) = 1 048 576. 1 dixième de seconde pour celle-ci. Ce qui reste énorme est relativise la puissance des processeurs.
+- O(2<sup>n</sup>) : O(2<sup>20</sup>) = 1 048 576. 1 dixième de seconde pour celle-ci. Ce qui reste énorme est relativise la puissance des processeurs.
 
 Il est donc important de comprendre la complexité algorithmique afin d'optimiser leurs utilisations.
+
+
+## Qu'est-ce que l'algocratie ?
+
+**Définition**, Algocratie: Système politique dans lequel des algorithmes influencent ou prennent activement part aux décisions publiques et à la vie politique de la société.
+
+Collecter et analyser des données massives, évaluer des situations complexes, prédire des tendances futures, recommander des actions à entreprendre, les algorithmes nous entourent littéralement. en voici quelques exemples :
+- Systèmes de recommandation en ligne : Amazon, Spotify, Youtube, Netflix, etc...
+- Prises de décisions financières : Analyse de marchés, gestion de portefeuille, trading haute fréquence, etc...
+- Santé et médecine : Diagnostique, aider la décision clinique, prédire des épidémies, etc...
+- Surveillance et sécurité : Surveiller l'activité en ligne, détecter des menaces, prévenir la criminalité, etc...
+- Gouvernance et politique : Analyse de données démographiques, présire les résultats électoraux, optimiser les politiques publiques, etc...
+
+Il est intéressant de noter qu'une bonne partie des utilisations décrites ci-dessus sont souvent cachés et/ou sur le fil (ou pas) de l'illégalité. Ce qui soulève beaucoup de questions éthiques, de transparence et de responsabilités quant à la conception et la mise en production de ceux-ci.
+
+# **3** Les langages d'implémentation
+
+## Quel langage est le plus optimisé ?
+
+Nativement nos ordinateurs ne comprennent qu'un seul langage, le langage machine, dont voici un exemple en hexadécimal :
+
+- B8 05 00 00 00   // Charger 5 dans le registre EAX
+- 05 02 00 00 00   // Ajouter 2 à la valeur dans EAX
+
+Explication :
+- Les **OpCodes** : B8 et 05 sont des "codes d'opération". Le processeur sait que B8 signifie "déplacer une donnée dans EAX".
+- Le **Little-Endian** : Tu as remarqué que le 5 est écrit 05 00 00 00 ? C'est parce que beaucoup de processeurs rangent les octets des nombres du plus petit au plus grand.
+
+### L'abstraction
+
+L'abstraction nous permet d'interpréter plus facilement le langage machine. On peut le voir comme des niveaux.
+
+- Niveau 0 (Pas d'abstraction): `B8 05 00 00 00` Le processeur comprend, pour nous c'est plus compliqué.
+- Niveau 1 (**Langage Assembleur**(Assembly)): `B8` devient `MOV` (Abréviation de Move), c'est l'assembleur qui traduit `MOV` en `B8`.
+- Niveau 2 (Langage haut niveau type PHP): `$n = 5;`.
+
+Important de noté que la liste ci-dessus est loin d'être exhaustive et que l'on pourrait créer autant de niveaux que de langages de programmation existant. Par exemple le **C** se logerait entre le niveau 1 et 2 que l'on a définit, il est plus haut niveau que l'**assembleur** mais plus bas niveaux que des langages interprétés comme le **PHP**.
+
+#### L'assembleur
+
+Voici un petit exemple d'un "Hello World!" en assembleur x86 sous DOS (Disk Operating System, OS précédant Windows) :
+
+```
+Cseg segment                 ; Début du segment de code nommé "Cseg"
+    assume cs:cseg, ds:cseg  ; On dit au processeur que le Code et les Données sont au même endroit
+    org 100h                 ; On réserve 256 octets pour le système (standard DOS)
+
+main proc                    ; Début de la procédure principale "main"
+    jmp debut                ; Sauter par-dessus les données pour ne pas essayer de les exécuter !
+
+    mess db 'Hello world!$'  ; Définition de la variable "mess" (db = define byte)
+                             ; Le '$' est le caractère obligatoire de fin pour DOS.
+
+debut:                       ; Étiquette (label) marquant le début réel du programme
+    mov dx, offset mess      ; On place l'adresse mémoire du message dans le registre DX
+    mov ah, 9                ; On prépare la fonction n°9 de DOS (Affichage de texte)
+    int 21h                  ; Appel au système : "DOS, affiche ce qu'il y a dans DX !"
+
+    ret                      ; "Return" : termine le programme proprement (rend la main au DOS)
+main endp                    ; Fin de la procédure "main"
+
+cseg ends                    ; Fin du segment de code
+end main                     ; Point final du fichier avec indication du point d'entrée
+```
+
+#### Le C
+
+Affichage d'un "Hello world!" en langage C :
+
+```c
+#include <stdio.h> // Inclut la bibliothèque standard pour pouvoir utiliser printf (Standard Input/Output)
+
+/**
+ * Point d'entrée du programme
+ * argc : nombre d'arguments passés au programme
+ * argv : tableau contenant les arguments (chaînes de caractères)
+ */
+int main(int argc, char **argv)
+{
+    // Affiche le message à l'écran. Le "\n" crée un saut de ligne.
+    printf("Hello world!\n");
+
+    // Retourne 0 au système d'exploitation pour dire que le programme s'est terminé sans erreur.
+    return 0;
+}
+```
