@@ -269,7 +269,7 @@ L'abstraction nous permet d'interpréter plus facilement le langage machine. On 
 
 Important de noté que la liste ci-dessus est loin d'être exhaustive. Par exemple le **C** se logerait entre le niveau 1 et 2 que l'on a définit, il est plus haut niveau que l'**assembleur** mais plus bas niveaux que des langages interprétés comme le **PHP**.
 
-**IMPORTANT**: En général un niveau d'abstraction bas signifie plus de possibilités et de contrôle sur le système. Les langages bas niveaux ne deviennent donc pas obsolètes avec l'arrivée de langages haut-niveau. D'autant qu'au plus on descend de niveau de complexité au plus les performances du programme s'améliorent.
+**IMPORTANT**: En général un niveau d'abstraction bas signifie plus de possibilités et de contrôle sur le système. Les langages bas niveaux ne deviennent donc pas obsolètes avec l'arrivée de langages haut-niveau. D'autant plus que plus on descend de niveau d'abstraction au plus les performances du programme s'améliorent.
 
 #### L'assembleur
 
@@ -329,4 +329,3 @@ Affichage d'un "Hello world!" en PHP :
 print("Hello world!");
 ?>
 ```
-
