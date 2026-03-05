@@ -206,3 +206,26 @@ Voici les classes de complexité les plus courantes, de la plus rapide à la plu
 | **$O(2^n)$** | **Exponentielle** |
 
 > **Note :** On s'intéresse toujours au **pire des cas** (quand l'élément cherché est à la toute fin ou absent).
+
+![Graphique notation Big O](./Images/BigOgraph.png)
+
+#### FLOPS
+
+Pour déterminer la puissance brute d'un CPU on utilise souvent le critère FLOPS.
+
+**FLOPS** : FLoating-point Operations Per Second. Opérations à virgule flottante par seconde.
+
+> Ex: Un Intel i9 14900K tourne à une moyenne de 1740 GFLOPS ( GigaFLOPS = 10⁹ FLOPS = 1 milliard d'opérations sur réels ( nombres à virgule ) par seconde )
+
+Calculer des nombres entiers est très simple pour un processeur. Calculer avec des nombres réels (la "virgule flottante") est beaucoup plus complexe car il faut gérer la précision (le nombre de chiffres après la virgule), l'exposant (la puissance de 10 pour placer la virgule). Pour cela on utilise donc des **FPU** ( Floating Point Unit ).
+
+> On retrouve les FLOPS dans le rendu 3D, l'entraînement de l'IA et les simulations scientifiques car toutes ces disciplines demandent des calculs de haute précision.
+
+---
+
+Pour mettre en perspective les différentes complexité algorithmique prenons un exemple de 20 données traités :
+- O(n) : O(20). La vitesse de calcul est ridicule ( millionièmes de seconde )
+- O(n!) : O(20!) = 2 432 902 008 176 640 000. Cela équivaut à 1 398 000 secondes soit 16 jours. La complexité O(n!) est la pire qui puisse exister.
+- O(2^n) : O(2<sup>20</sup>) = 1 048 576. 1 dixième de seconde pour celle-ci. Ce qui reste énorme est relativise la puissance des processeurs.
+
+Il est donc important de comprendre la complexité algorithmique afin d'optimiser leurs utilisations.
