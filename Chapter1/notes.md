@@ -235,6 +235,8 @@ Il est donc important de comprendre la complexité algorithmique afin d'optimise
 
 **Définition**, Algocratie: Système politique dans lequel des algorithmes influencent ou prennent activement part aux décisions publiques et à la vie politique de la société.
 
+---
+
 Collecter et analyser des données massives, évaluer des situations complexes, prédire des tendances futures, recommander des actions à entreprendre, les algorithmes nous entourent littéralement. en voici quelques exemples :
 - Systèmes de recommandation en ligne : Amazon, Spotify, Youtube, Netflix, etc...
 - Prises de décisions financières : Analyse de marchés, gestion de portefeuille, trading haute fréquence, etc...
@@ -242,7 +244,7 @@ Collecter et analyser des données massives, évaluer des situations complexes, 
 - Surveillance et sécurité : Surveiller l'activité en ligne, détecter des menaces, prévenir la criminalité, etc...
 - Gouvernance et politique : Analyse de données démographiques, présire les résultats électoraux, optimiser les politiques publiques, etc...
 
-Il est intéressant de noter qu'une bonne partie des utilisations décrites ci-dessus sont souvent cachés et/ou sur le fil (ou pas) de l'illégalité. Ce qui soulève beaucoup de questions éthiques, de transparence et de responsabilités quant à la conception et la mise en production de ceux-ci.
+> Il est intéressant de noter qu'une bonne partie des utilisations décrites ci-dessus sont souvent cachés et/ou sur le fil (ou pas) de l'illégalité. Ce qui soulève beaucoup de questions éthiques, de transparence et de responsabilités quant à la conception et la mise en production de ceux-ci.
 
 # **3** Les langages d'implémentation
 
@@ -296,7 +298,7 @@ end main                     ; Point final du fichier avec indication du point d
 
 #### Le C
 
-Affichage d'un "Hello world!" en langage C :
+Affichage d'un "Hello world!" en C :
 
 ```c
 #include <stdio.h> // Inclut la bibliothèque standard pour pouvoir utiliser printf (Standard Input/Output)
@@ -314,4 +316,14 @@ int main(int argc, char **argv)
     // Retourne 0 au système d'exploitation pour dire que le programme s'est terminé sans erreur.
     return 0;
 }
+```
+
+#### PHP
+
+Affichage d'un "Hello world!" en PHP :
+
+```php
+<?php
+print("Hello world!");
+?>
 ```
