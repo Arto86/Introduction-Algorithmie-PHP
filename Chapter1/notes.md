@@ -329,3 +329,39 @@ Affichage d'un "Hello world!" en PHP :
 print("Hello world!");
 ?>
 ```
+
+
+### Autres classifications
+
+L'abstraction n'est pas le seul critère de classification des langages. En voici quelqu'uns d'autre:
+- Généralistes (Python, C++) ou Spécialisés (SQL, GLSL);
+- Objet(POO) (Java, C#) ou Procédural (C, Fortran);
+- Typé (TypeScript, Swift) ou Non Typé (Javascript, PHP);
+- Interprété (Ruby, Perl, Javascript) ou Compilé (Rust, Go, C);
+- Etc...
+
+
+### PHP
+
+Afin d'implémenter au mieux nos algorithmes, il nous faut un langage simple, haut niveau, généraliste à première vue mais pouvant évoluer pour être plus complet et complexe. Éviter la compilation (trop long) mais aussi que le langage puisse cohabiter avec d'autres langages (accès à une base de donnée MySQL par exemple). Que l'on puisse l'utiliser dans le plus d'environnement (OS) possibles.
+
+Dans notre cas nous allons utiliser PHP mais bien d'autres comme le Python, le Javascript et d'autre.
+
+> Noter que ce livre a été écrit lorsque la dernière version stable de PHP était 8.3. Lorsque j'écris ces notes nous en sommes à PHP 8.5.
+
+PHP fait aussi partie de LAMP (Linux - Apache - MySQL - PHP), un "quatuor gagnant des serveurs web". Il existe XAMPP, équivalent LAMP pour Windows ou MacOS.
+
+Pour nos tests il faudra uniquement un éditeur de texte et un navigateur web.
+
+
+# **4** Réponses aux exercices
+
+Pour convertir un nombre binaire en décimal nous devons :
+- Utiliser les puissance de 2 selon le poid.
+- 110100 = Respectivement poid 5 4 3 2 1 0 = `1*2⁵ + 1*2⁴ + 0*2³ + 1*2² + 0*2¹ + 0*2⁰` = `32 + 16 + 0 + 4 + 0 + 0` = 52
+
+Quelle est la valeur maximale d'un nombre codé en 16 bits sans tenir compte du signe ? Indiquez comment calculer cette valeur et exprimez le résultat en décimal et en hexadécimal.
+- 2<sup>16</sup> - 1 = 65 535
+- 1111 1111 1111 1111 = F F F F = 0xFFFF
+
+Précision :  En informatique, lorsqu'on code un nombre sur 16 bits, on dispose de $2^{16}$ combinaisons différentes, soit un total de 65 536 valeurs possibles.  Dire que l'**on ne tient pas compte du signe** signifie que l'on travaille en mode non-signé (unsigned) : aucun bit n'est sacrifié pour indiquer si le nombre est positif ou négatif. L'intégralité des 16 positions binaires est donc dédiée à la grandeur du nombre, ce qui permet de couvrir une plage allant de 0 (tous les bits à zéro) jusqu'à 65 535 (tous les bits à un).  À l'inverse, si l'on tenait compte du signe, le bit de poids fort (le tout premier à gauche) serait réservé pour distinguer les nombres positifs des négatifs, ce qui diviserait par deux la valeur maximale atteignable, ce qui nous donnerait une plage de -32 768 à 32 767. 
