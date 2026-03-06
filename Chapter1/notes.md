@@ -360,13 +360,42 @@ Pour convertir un nombre binaire en décimal nous devons :
 - Utiliser les puissance de 2 selon le poid.
 - 110100 = Respectivement poid 5 4 3 2 1 0 = `1*2⁵ + 1*2⁴ + 0*2³ + 1*2² + 0*2¹ + 0*2⁰` = `32 + 16 + 0 + 4 + 0 + 0` = 52
 
+---
+
 Quelle est la valeur maximale d'un nombre codé en 16 bits sans tenir compte du signe ? Indiquez comment calculer cette valeur et exprimez le résultat en décimal et en hexadécimal.
 - 2<sup>16</sup> - 1 = 65 535
 - 1111 1111 1111 1111 = F F F F = 0xFFFF
 
-Précision :
-En informatique, lorsqu'on code un nombre sur 16 bits, on dispose de $2^{16}$ combinaisons différentes, soit un total de 65 536 valeurs possibles.
+**Précision :**
+- En informatique, lorsqu'on code un nombre sur 16 bits, on dispose de $2^{16}$ combinaisons différentes, soit un total de 65 536 valeurs possibles.
+- Dire que l'**on ne tient pas compte du signe** signifie que l'on travaille en mode non-signé (unsigned) : aucun bit n'est sacrifié pour indiquer si le nombre est positif ou négatif. L'intégralité des 16 positions binaires est donc dédiée à la grandeur du nombre, ce qui permet de couvrir une plage allant de 0 (tous les bits à zéro) jusqu'à 65 535 (tous les bits à un).
+- À l'inverse, si l'on tenait compte du signe, le bit de poids fort (le tout premier à gauche) serait réservé pour distinguer les nombres positifs des négatifs, ce qui diviserait par deux la valeur maximale atteignable, ce qui nous donnerait une plage de -32 768 à 32 767. 
 
-Dire que l'**on ne tient pas compte du signe** signifie que l'on travaille en mode non-signé (unsigned) : aucun bit n'est sacrifié pour indiquer si le nombre est positif ou négatif. L'intégralité des 16 positions binaires est donc dédiée à la grandeur du nombre, ce qui permet de couvrir une plage allant de 0 (tous les bits à zéro) jusqu'à 65 535 (tous les bits à un).
+---
 
-À l'inverse, si l'on tenait compte du signe, le bit de poids fort (le tout premier à gauche) serait réservé pour distinguer les nombres positifs des négatifs, ce qui diviserait par deux la valeur maximale atteignable, ce qui nous donnerait une plage de -32 768 à 32 767. 
+Convertissez le nombre décimal 3407 en binaire et en hexadécimal:
+- 1 2 4 8  16 32 64 128  256 512 1024 2048 > 3407 < 4096, donc 2<sup>12</sup>.
+- On a 2 options :
+    - 2048 + 1024 = 3072, + 256 = 3328, + 64 = 3392, + 8 = 3400, + 4 = 3404, + 2 = 3406, + 1 = 3407.
+
+    - 3407 - 2048 = 1359 donc 1
+    - 1359 - 1024 = 335 donc 1
+    - 335 - 512 = -177 donc 0
+    - 335 - 256 = 79 donc 1
+    - 79 - 128 = -49 donc 0
+    - 79 - 64 = 15 donc 1
+    - 15 - 32 = -17 donc 0
+    - 15 - 16 = -1 donc 0
+    - 15 - 8 = 7 donc 1
+    - 7 - 4 = 3 donc 1
+    - 3 - 2 = 1 donc 1
+    - 1 - 1 = 0 donc 1
+    - soit 1101 0100 1111
+
+En hexadécimal on part du binaire :
+- 1101 0100 1101 = D 4 F = 0xD4F.
+
+---
+
+Quel est l'intrus parmis les 4 langages PHP, Java, HTML et C++ ?
+- L'intrus est le HTML, car contrairement au PHP, au Java et au C++, ce n'est pas un langage de programmation mais un langage de balisage servant uniquement à structurer du contenu.
