@@ -364,4 +364,9 @@ Quelle est la valeur maximale d'un nombre codé en 16 bits sans tenir compte du 
 - 2<sup>16</sup> - 1 = 65 535
 - 1111 1111 1111 1111 = F F F F = 0xFFFF
 
-Précision :  En informatique, lorsqu'on code un nombre sur 16 bits, on dispose de $2^{16}$ combinaisons différentes, soit un total de 65 536 valeurs possibles.  Dire que l'**on ne tient pas compte du signe** signifie que l'on travaille en mode non-signé (unsigned) : aucun bit n'est sacrifié pour indiquer si le nombre est positif ou négatif. L'intégralité des 16 positions binaires est donc dédiée à la grandeur du nombre, ce qui permet de couvrir une plage allant de 0 (tous les bits à zéro) jusqu'à 65 535 (tous les bits à un).  À l'inverse, si l'on tenait compte du signe, le bit de poids fort (le tout premier à gauche) serait réservé pour distinguer les nombres positifs des négatifs, ce qui diviserait par deux la valeur maximale atteignable, ce qui nous donnerait une plage de -32 768 à 32 767. 
+Précision :
+En informatique, lorsqu'on code un nombre sur 16 bits, on dispose de $2^{16}$ combinaisons différentes, soit un total de 65 536 valeurs possibles.
+
+Dire que l'**on ne tient pas compte du signe** signifie que l'on travaille en mode non-signé (unsigned) : aucun bit n'est sacrifié pour indiquer si le nombre est positif ou négatif. L'intégralité des 16 positions binaires est donc dédiée à la grandeur du nombre, ce qui permet de couvrir une plage allant de 0 (tous les bits à zéro) jusqu'à 65 535 (tous les bits à un).
+
+À l'inverse, si l'on tenait compte du signe, le bit de poids fort (le tout premier à gauche) serait réservé pour distinguer les nombres positifs des négatifs, ce qui diviserait par deux la valeur maximale atteignable, ce qui nous donnerait une plage de -32 768 à 32 767. 
