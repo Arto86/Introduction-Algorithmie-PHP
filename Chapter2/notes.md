@@ -6,17 +6,21 @@
 
 Une variable est contenu dans une case mémoire (8 bits = 1 octet = 256 valeurs différents).
 
+**Nombre réel (1.7) != Nombre entier (2)**
+
+Un **entier** : nombre sans virgule, négatif ou positif.
+
+Un **réels** : nombre à virgule, positif ou négatif.
+
 #### Variable signée
 
 Comment faire dans le cas d'un nombre **négatif** ? Le premier bit est réservé au signe et nous passons donc de 0 à 255, à, -128 à 127. Nous appelons ça une variable **signée**.
 
 Pour de plus grandes valeurs il est possible d'allouer plusieurs cases mémoires à une variable afin de stocker de plus grande valeurs.
 
-> 16 bits = -32768 à 32767, 32 bits = -2 147 483 648 à 2 147 483 647
+> 16 bits = -32768 à 32767, 32 bits = -2 147 483 648 à 2 147 483 647.
 
 #### Variable avec nombre réels
-
-Nombre réel (1.7) != Nombre entier (2)
 
 Les nombres réels sont plus lents à manipuler que les autres et leur codage binaire est radicalement différents que les nombres entiers.
 
@@ -39,3 +43,22 @@ Tableaux des plages possibles en fonction des types numériques :
 | **64 bits** (8 octets)| `uint64` / `unsigned long` | Non signé | 0 | 18 446 744 073 709 551 615 |
 | **32 bits** | `float` (virgule flottante)| Signé | ~ -3.4 × 10³⁸ | ~ 3.4 × 10³⁸ |
 | **64 bits** | `double` (virgule flottante)| Signé | ~ -1.7 × 10³⁰⁸ | ~ 1.7 × 10³⁰⁸ |
+
+
+#### Caractères
+
+Dans la grande majorité des cas tous les caractères nécessaires logent dans un octet. Donc pour une phrase de 50 caractères est égale à 50 octets.
+
+> Se référer à table ASCII mais aussi les normes comme ISO UTF-8 et d'autre.
+
+## Les opérateurs
+
+- + : addition,
+- - : soustraction,
+- * / x : multiplication,
+- / : division,
+- % / mod : modulo,
+- DIV : division entière.
+
+> Modulo est le reste d'une division entière (9/2 = 4 reste 1 donc 9%2 = 1).
+> DIV à le même principe que modulo mais à l'envers (9/2 = 4 reste 1 donc 9 DIV 2 = 3).
