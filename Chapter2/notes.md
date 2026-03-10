@@ -51,14 +51,86 @@ Dans la grande majorité des cas tous les caractères nécessaires logent dans u
 
 > Se référer à table ASCII mais aussi les normes comme ISO UTF-8 et d'autre.
 
-## Les opérateurs
+## Les opérateurs arithmétiques
 
-- + : addition,
-- - : soustraction,
-- * / x : multiplication,
-- / : division,
-- % / mod : modulo,
-- DIV : division entière.
+- "+" : addition,
+- "-" : soustraction,
+- "*" / x : multiplication,
+- "/" : division,
+- "%" / "mod" : modulo,
+- "DIV" : division entière.
 
 > Modulo est le reste d'une division entière (9/2 = 4 reste 1 donc 9%2 = 1).
 > DIV à le même principe que modulo mais à l'envers (9/2 = 4 reste 1 donc 9 DIV 2 = 3).
+
+*Une partie de ce chapitre concerne les opérations du second degré et la calculation du delta. Ce sur quoi je ne vais pas m'attarder pour le moment.*
+
+En PHP des fonctions mathématiques sont intégrées. Comme "**sqrt**" (racine carrée).
+
+Mais aussi des opérateurs arithmétiques unaires :
+- "++x" : Incrémente x de 1.
+- "x++" : Idem mais après l'utilisation en cours.
+- "--x" : Décrémente x de 1.
+- "x--" : Idem mais après l'utilisation en cours.
+
+Mise en contexte :
+```php
+<?php
+$x = 1;
+
+for ($i = 3; $i > 0; $i--){
+    echo ++$x;
+    echo $x++;
+    echo $x;
+}
+?>
+```
+Ce code retourne le résultat suivant :
+- 1er tour :
+    - 2 ($x passe de 1 à 2, puis on l'affiche)
+    - 2 (On affiche $x tel quel (qui vaut 2), ensuite, $x passe à 3.)
+    - 3 (On affiche la valeur actuelle de $x, qui est maintenant de 3.)
+- 2ème tour :
+    - 4
+    - 4
+    - 5
+- 3ème tour :
+    - 6
+    - 6
+    - 7
+
+## Les opérateurs booléens
+
+Un **opérateur booléen** est un outil de logique (comme ET, OU, NON) qui permet de relier ou d'inverser plusieurs conditions entre elles pour déterminer si une situation finale est strictement Vraie ou Fausse.
+
+**Pourquoi a-t-on besoin de ces opérateurs binaires ?**
+Ces opérateurs sont indispensables car ils constituent le langage fondamental des processeurs, leur permettant de combiner des états électriques basiques (0 et 1) afin de prendre des décisions logiques complexes.
+
+### Table de vérité : ET (AND)
+
+| A | B | A ET B |
+| :---: | :---: | :---: |
+| Faux (0) | Faux (0) | Faux (0) |
+| Faux (0) | Vrai (1) | Faux (0) |
+| Vrai (1) | Faux (0) | Faux (0) |
+| Vrai (1) | Vrai (1) | Vrai (1) |
+
+---
+
+### Table de vérité : OU (OR)
+
+| A | B | A OU B |
+| :---: | :---: | :---: |
+| Faux (0) | Faux (0) | Faux (0) |
+| Faux (0) | Vrai (1) | Vrai (1) |
+| Vrai (1) | Faux (0) | Vrai (1) |
+| Vrai (1) | Vrai (1) | Vrai (1) |
+
+---
+
+### Table de vérité : NON (NOT)
+
+| A | NON A |
+| :---: | :---: |
+| Faux (0) | Vrai (1) |
+| Vrai (1) | Faux (0) |
